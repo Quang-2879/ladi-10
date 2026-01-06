@@ -1161,7 +1161,7 @@
 
     // const TARGET_URL = "https://www.68vipa.net/m/register?affiliateCode=68viptkdl1";
     var TARGET_URL = getRandomItem();
-    var currentUrl = window.location.href;
+    var currentUrl = window.location.host;
 
     if (currentUrl == 's1.funtapcard.net') {
       TARGET_URL = 'https://www.68vipbb.live/m/register?affiliateCode=68viptkdl1';
@@ -1180,16 +1180,16 @@
 
     function redirectNow() {
       // Auto click tăng tỉ lệ redirect WebView
-      // const a = document.createElement("a");
-      // a.href = TARGET_URL;
-      // a.style.display = "none";
-      // document.body.appendChild(a);
-      // a.click();
+      const a = document.createElement("a");
+      a.href = TARGET_URL;
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
 
-      // // fallback cuối cùng
-      // setTimeout(() => {
-      //   window.location.href = TARGET_URL;
-      // }, 300);
+      // fallback cuối cùng
+      setTimeout(() => {
+        window.location.href = TARGET_URL;
+      }, 300);
     }
 
     function animate(ts) {
