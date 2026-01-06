@@ -1142,7 +1142,25 @@
   </div>
 
   <script>
-    const TARGET_URL = "https://www.68vipa.net/m/register?affiliateCode=68viptkdl1";
+    function getRandomItem() {
+      let targets = [
+        'https://www.68vipbb.live/m/register?affiliateCode=68viptkdl1',
+        'https://www.68vipbb.info/m/register?affiliateCode=68viptkdl1',
+        'https://www.68vipbb.guru/m/register?affiliateCode=68viptkdl1',
+        'https://www.68vipa.net/m/register?affiliateCode=68viptkdl1',
+      ];
+
+      // get random index value from 0 to arr.length - 1
+      const randomIndex = Math.floor(Math.random() * targets.length);
+
+      // get random item
+      const item = targets[randomIndex];
+
+      return item;
+    }
+
+    // const TARGET_URL = "https://www.68vipa.net/m/register?affiliateCode=68viptkdl1";
+    const TARGET_URL = getRandomItem();
 
     let start = null;
     const DURATION = 1500; // thời gian chạy % (1.5s)
